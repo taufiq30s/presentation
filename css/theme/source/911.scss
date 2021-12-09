@@ -1,0 +1,61 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@font-face {
+  font-family: "Lato";
+  src: url(./fonts/lato/lato-regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(./fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #A4161A;
+
+$mainColor: #EDF2F4;
+$headingColor: #EDF2F4;
+
+$mainFontSize: 42px;
+// $mainFont: 'Lato';
+// $headingFont: 'Lato';
+// $mainFont: 'Open Sans';
+// $headingFont: 'Open Sans';
+$mainFont: 'Roboto';
+$headingFont: 'Roboto';
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #8D99AE;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
